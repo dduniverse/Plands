@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+    <h3>로그인</h3>
+
+    <form method="POST" action = "{% url 'accounts:login' %}">
+        {% csrf_token %}
+        {% include 'accounts/form_errors.html' %} <!-- 로그인 실패 시 로그인 실패 원인 출력-->
+        
+        <div>
+            <label>사용자 ID</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label>비밀번호</label>
+            <input type="text" name="password" id="password">
+        </div>
+        <button type="submit">로그인</button>
+    </form>
+    
+{% endblock %}
