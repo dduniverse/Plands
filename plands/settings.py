@@ -122,5 +122,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "plands", "static")]
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-# 로그인 성공 시 자동으로 이동할 URL
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'        # 로그인 성공 시 자동으로 이동할 URL
+LOGOUT_REDIRECT_URL = '/'       # 로그아웃 성공 시 자동으로 이동할 URL
